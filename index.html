@@ -3,187 +3,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hocine Mahni – Portfolio</title>
-
-  <!-- Feuille de styles -->
+  <title>Hocine Mahni – HPC Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Icônes Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- ───────── HEADER ───────── -->
-  <header>
-    <h1>Hocine Mahni</h1>
-    <p>PhD Student &amp; Researcher</p>
-  </header>
+  <canvas id="bg-canvas"></canvas>
 
-  <!-- ───────── NAVIGATION ───────── -->
-  <nav>
-    <ul>
-      <li><a href="#bio">Bio</a></li>
-      <li><a href="#formation">Formation</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#papers">Publications</a></li>
-      <li><a href="#sponsors">Collaborators</a></li>
-      <li><a href="#carousel">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">HM<span class="dot">.</span></span>
+      <ul class="nav-links">
+        <li><a href="#bio">About</a></li>
+        <li><a href="#formation">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#papers">Publications</a></li>
+        <li><a href="#sponsors">Collaborators</a></li>
+        <li><a href="#carousel">Gallery</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- ───────── BIO ───────── -->
-  <section id="bio">
-    <h2>Bio</h2>
-    <p>
-        Hello! I am <strong>Hocine Mahni</strong>, a PhD researcher at the 
-  <strong>Lab-STICC</strong> laboratory, affiliated with 
-  <strong>ENSTA | Institut Polytechnique de Paris</strong>.
-  
-  My research focuses on data placement strategies for heterogeneous and multilevel storage systems, 
-  particularly in the context of high-performance computing. I am interested in improving I/O efficiency, 
-  storage resource utilization, and data management policies for large-scale scientific applications.
-    </p>
-  </section>
-
-  <!-- ───────── FORMATION ───────── -->
-  <section id="formation">
-    <h2>Formation</h2>
+  <div class="mobile-menu" id="mobile-menu">
     <ul>
-      <li>
-        <strong>PhD in HPC Data Placement</strong><br>
-        ENSTA | Institut Polytechnique de Paris, since December&nbsp;2022<br>
-        Thesis Title: <i>DataMeSS: HPC Data Placement on Heterogeneous and Multilevel Storage Systems</i>
-      </li>
-      <li>
-        <strong>Master in Big Data Analytics</strong><br>
-        University of Sciences and Technology Houari Boumediene (2019–2021)<br>
-        Focus: <i>Big Data Analytic Methods &amp; Decision Support</i><br>
-        Mention: Very good, Grade: 16 / 20
-      </li>
-      <li>
-        <strong>License in Operational Research</strong><br>
-        University of Sciences and Technology Houari Boumediene (2016–2019)<br>
-        Focus: <i>Research in Operational Decision Methods</i><br>
-        Mention: Very good, Grade: 17 / 20
-      </li>
+      <li><a href="#bio" class="mm-link">About</a></li>
+      <li><a href="#formation" class="mm-link">Education</a></li>
+      <li><a href="#experience" class="mm-link">Experience</a></li>
+      <li><a href="#papers" class="mm-link">Publications</a></li>
+      <li><a href="#sponsors" class="mm-link">Collaborators</a></li>
+      <li><a href="#carousel" class="mm-link">Gallery</a></li>
+      <li><a href="#contact" class="mm-link">Contact</a></li>
     </ul>
-  </section>
+  </div>
 
-  <!-- ───────── EXPERIENCE ───────── -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Assistant Teacher</strong><br>
-        ENSTA | Institut Polytechnique de Paris, 2024<br>
-        <em>Courses Taught :</em> Database, Linear Optimization, Introduction to Programming, Embedded Machine Learning.
-      </li>
-      <li>
-        <strong>Information Systems Administrator Engineer (DevOps)</strong><br>
-        SONELGAZ (ELIT), Algiers, Algeria — Aug.&nbsp;2021 to Nov&nbsp;2022<br>
-        <em>Responsibilities :</em>
-        <ul class="responsibilities">
-          <li>Implemented and managed CI/CD pipelines (GitLab CI, Jenkins, Ansible)</li>
-          <li>Website administration (front‑end &amp; back‑end)</li>
-          <li>PostgreSQL management</li>
-          <li>Deployment of Node.js &amp; Java EE apps (Payara Server, GlassFish)</li>
-          <li>Virtualization (KVM/VMware), Docker / Kubernetes, Ansible automation</li>
-          <li>Troubleshooting &amp; monitoring</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Intern (Master's Final Project)</strong><br>
-        SONELGAZ (Ex‑ELIT), Algiers, Algeria — Feb.&nbsp;2021 to Jul&nbsp;2021<br>
-        <em>Project :</em> Design and implementation of a decision‑support system for datacenter administration tasks.
-      </li>
-      <li>
-        <strong>Intern (Bachelor's Final Project)</strong><br>
-        USTHB — Jan.&nbsp;2019 to Jul&nbsp;2019<br>
-        <em>Project :</em> Development of a decision‑support tool for managing faculty assignments.
-      </li>
-    </ul>
-  </section>
-
-  <!-- ───────── PUBLICATIONS ───────── -->
-  <section id="papers">
-    <h2>Publications</h2>
-    <ul>
-      <li>
-        <strong><a href="https://www.researchgate.net/publication/371225858_Adapting_the_ARC_Cache_Management_Policy_to_File_Granularity" target="_blank" rel="noopener">Adapting the ARC Cache Management Policy to File Granularity</a></strong><br>
-        Poster presented at Per3s Workshop, 2023
-      </li>
-      <li>
-        <strong><a href="https://dl-acm-org.ins2i.bib.cnrs.fr/doi/abs/10.1145/3672608.3707969" target="_blank" rel="noopener">Multicriteria File‑Level Placement Policy for HPC Storage</a></strong><br>
-        Proceedings of ACM SAC, 2025
-      </li>
-      <li>
-        <strong><a href="https://www.researchgate.net/publication/392768883_FABME_File-level_placement_policy_with_control_admission_burst_prefetching_and_multi-criteria_eviction_for_HPC_multi-tier_storage" target="_blank" rel="noopener">FABME: File‑Level Placement Policy with Control Admission, Burst Prefetching, and Multi‑Criteria Eviction for HPC Multi‑Tier Storage</a></strong><br>
-        Poster presented at Per3s Workshop, 2025
-      </li>
-      <li>
-        <strong><a href="https://dl.acm.org/doi/10.1145/3805687.3806258" target="_blank" rel="noopener">Context Matters: Constant-Time File Lifecycle Prediction from File Creation Call Stacks</a></strong><br>
-        Proceedings of CHEOPS '26 – 6th Workshop on Challenges and Opportunities of Efficient and Performant Storage Systems, ACM, April 2026
-      </li>
-    </ul>
-  </section>
-
-  <!-- ───────── COLLABORATORS ───────── -->
-  <section id="sponsors">
-    <h2>Collaborators</h2>
-    <div class="sponsor-logos">
-      <img src="CEA_logotype.png" alt="CEA logo">
-      <img src="logo_h_ensta.png" alt="ENSTA logo">
-      <img src="logo-lab-sticc (1).png" alt="Lab-STICC logo">
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-content">
+      <p class="hero-tag reveal"><span class="tag-chip">PhD Researcher &middot; Lab-STICC &middot; ENSTA Paris</span></p>
+      <h1 class="hero-name reveal">Hocine<br><span class="accent">Mahni</span></h1>
+      <p class="hero-sub reveal">HPC Storage &amp; I/O Optimization<br>Data Placement on Heterogeneous &amp; Multilevel Storage Systems</p>
+      <div class="hero-actions reveal">
+        <a href="#papers" class="btn-primary">View Publications</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
     </div>
-  </section>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
 
-  <!-- ───────── GALLERY ───────── -->
-  <section id="carousel">
-    <h2>Gallery</h2>
-
-    <!-- Boutons de défilement -->
-    <button class="prev" aria-label="Previous" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="next" aria-label="Next" onclick="moveSlide(1)">&#10095;</button>
-
-    <div class="carousel-container">
-      <div class="carousel-slide">
-        <img src="20250401_111203.jpg" alt="Photo 1">
-        <img src="20250401_111207.jpg" alt="Photo 2">
-        <img src="20250402_135847.jpg" alt="Photo 3">
-        <img src="20250402_140213.jpg" alt="Photo 4">
-        <img src="20250402_141043.jpg" alt="Photo 5">
-        <img src="20250402_141501.jpg" alt="Photo 6">
-        <img src="per3s_2025_1.jpg" alt="Photo 7">
-        <img src="per3s_2025_2.jpg" alt="Photo 8">
+  <!-- BIO -->
+  <section id="bio" class="section">
+    <div class="section-inner">
+      <div class="section-label reveal">01 &mdash; About</div>
+      <div class="bio-grid">
+        <div class="bio-text reveal">
+          <h2 class="section-title">Pushing the boundaries<br>of HPC storage.</h2>
+          <p>I am a PhD researcher at <strong>Lab-STICC, ENSTA | Institut Polytechnique de Paris</strong>, working at the intersection of high-performance computing and storage systems architecture.</p>
+          <p>My research focuses on designing intelligent data placement strategies for heterogeneous and multilevel storage hierarchies — combining multi-criteria optimization, machine learning, and systems-level engineering to reduce I/O bottlenecks in large-scale scientific workloads.</p>
+        </div>
+        <div class="bio-stats reveal">
+          <div class="stat-card">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Publications</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years PhD Research</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">HPC</span>
+            <span class="stat-label">Storage &amp; I/O Systems</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">IP Paris</span>
+            <span class="stat-label">Institut Polytechnique</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ───────── LIGHTBOX (agrandissement) ───────── -->
+  <!-- EDUCATION -->
+  <section id="formation" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-label reveal">02 &mdash; Education</div>
+      <h2 class="section-title reveal">Academic Background</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-date">2022 &mdash; Present</div>
+          <div class="tl-content">
+            <h3>PhD in HPC Data Placement</h3>
+            <p class="tl-org">ENSTA | Institut Polytechnique de Paris</p>
+            <p class="tl-desc"><em>DataMeSS: HPC Data Placement on Heterogeneous and Multilevel Storage Systems</em></p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-date">2019 &mdash; 2021</div>
+          <div class="tl-content">
+            <h3>Master in Big Data Analytics</h3>
+            <p class="tl-org">USTHB &mdash; University of Sciences and Technology Houari Boumediene</p>
+            <p class="tl-desc">Big Data Analytic Methods &amp; Decision Support &mdash; <strong>16/20, Very Good</strong></p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker"></div>
+          <div class="tl-date">2016 &mdash; 2019</div>
+          <div class="tl-content">
+            <h3>Licence in Operational Research</h3>
+            <p class="tl-org">USTHB &mdash; University of Sciences and Technology Houari Boumediene</p>
+            <p class="tl-desc">Research in Operational Decision Methods &mdash; <strong>17/20, Very Good</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <div class="section-label reveal">03 &mdash; Experience</div>
+      <h2 class="section-title reveal">Professional Track</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="tl-marker accent-marker"></div>
+          <div class="tl-date">2024</div>
+          <div class="tl-content">
+            <h3>Assistant Teacher</h3>
+            <p class="tl-org">ENSTA | Institut Polytechnique de Paris</p>
+            <div class="tag-list">
+              <span class="tag">Database</span>
+              <span class="tag">Linear Optimization</span>
+              <span class="tag">Intro to Programming</span>
+              <span class="tag">Embedded Machine Learning</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker accent-marker"></div>
+          <div class="tl-date">Aug 2021 &mdash; Nov 2022</div>
+          <div class="tl-content">
+            <h3>Information Systems Administrator Engineer <span class="role-badge">DevOps</span></h3>
+            <p class="tl-org">SONELGAZ (ELIT) &mdash; Algiers, Algeria</p>
+            <div class="tag-list">
+              <span class="tag">GitLab CI / Jenkins</span>
+              <span class="tag">Ansible</span>
+              <span class="tag">Docker / Kubernetes</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">KVM / VMware</span>
+              <span class="tag">Node.js &middot; Java EE</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker accent-marker"></div>
+          <div class="tl-date">Feb &mdash; Jul 2021</div>
+          <div class="tl-content">
+            <h3>Intern &mdash; Master's Final Project</h3>
+            <p class="tl-org">SONELGAZ (Ex-ELIT) &mdash; Algiers, Algeria</p>
+            <p class="tl-desc">Design and implementation of a decision-support system for datacenter administration tasks.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="tl-marker accent-marker"></div>
+          <div class="tl-date">Jan &mdash; Jul 2019</div>
+          <div class="tl-content">
+            <h3>Intern &mdash; Bachelor's Final Project</h3>
+            <p class="tl-org">USTHB</p>
+            <p class="tl-desc">Development of a decision-support tool for managing faculty assignments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="papers" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-label reveal">04 &mdash; Research</div>
+      <h2 class="section-title reveal">Publications</h2>
+      <div class="pub-list">
+        <a href="https://dl.acm.org/doi/10.1145/3805687.3806258" target="_blank" rel="noopener" class="pub-card reveal">
+          <div class="pub-meta">
+            <span class="pub-year">2026</span>
+            <span class="pub-venue">CHEOPS '26 &middot; ACM</span>
+            <span class="pub-badge">New</span>
+          </div>
+          <h3 class="pub-title">Context Matters: Constant-Time File Lifecycle Prediction from File Creation Call Stacks</h3>
+          <p class="pub-authors">Hocine Mahni, Louis-Marie Nicolas, Jalil Boukhobza</p>
+          <div class="pub-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <a href="https://www.researchgate.net/publication/392768883_FABME_File-level_placement_policy_with_control_admission_burst_prefetching_and_multi-criteria_eviction_for_HPC_multi-tier_storage" target="_blank" rel="noopener" class="pub-card reveal">
+          <div class="pub-meta">
+            <span class="pub-year">2025</span>
+            <span class="pub-venue">Per3s Workshop</span>
+            <span class="pub-type">Poster</span>
+          </div>
+          <h3 class="pub-title">FABME: File-Level Placement Policy with Control Admission, Burst Prefetching, and Multi-Criteria Eviction for HPC Multi-Tier Storage</h3>
+          <div class="pub-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <a href="https://dl-acm-org.ins2i.bib.cnrs.fr/doi/abs/10.1145/3672608.3707969" target="_blank" rel="noopener" class="pub-card reveal">
+          <div class="pub-meta">
+            <span class="pub-year">2025</span>
+            <span class="pub-venue">ACM SAC</span>
+          </div>
+          <h3 class="pub-title">Multicriteria File-Level Placement Policy for HPC Storage</h3>
+          <div class="pub-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+        <a href="https://www.researchgate.net/publication/371225858_Adapting_the_ARC_Cache_Management_Policy_to_File_Granularity" target="_blank" rel="noopener" class="pub-card reveal">
+          <div class="pub-meta">
+            <span class="pub-year">2023</span>
+            <span class="pub-venue">Per3s Workshop</span>
+            <span class="pub-type">Poster</span>
+          </div>
+          <h3 class="pub-title">Adapting the ARC Cache Management Policy to File Granularity</h3>
+          <div class="pub-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLABORATORS -->
+  <section id="sponsors" class="section">
+    <div class="section-inner">
+      <div class="section-label reveal">05 &mdash; Network</div>
+      <h2 class="section-title reveal">Institutional Collaborators</h2>
+      <div class="collab-grid reveal">
+        <div class="collab-card"><img src="CEA_logotype.png" alt="CEA"></div>
+        <div class="collab-card"><img src="logo_h_ensta.png" alt="ENSTA Paris"></div>
+        <div class="collab-card"><img src="logo-lab-sticc (1).png" alt="Lab-STICC"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="carousel" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-label reveal">06 &mdash; Gallery</div>
+      <h2 class="section-title reveal">Moments</h2>
+    </div>
+    <div class="gallery-wrapper reveal">
+      <button class="gal-btn gal-prev" aria-label="Previous" onclick="moveSlide(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img src="20250401_111203.jpg" alt="Photo 1">
+          <img src="20250401_111207.jpg" alt="Photo 2">
+          <img src="20250402_135847.jpg" alt="Photo 3">
+          <img src="20250402_140213.jpg" alt="Photo 4">
+          <img src="20250402_141043.jpg" alt="Photo 5">
+          <img src="20250402_141501.jpg" alt="Photo 6">
+          <img src="per3s_2025_1.jpg" alt="Photo 7">
+          <img src="per3s_2025_2.jpg" alt="Photo 8">
+        </div>
+      </div>
+      <button class="gal-btn gal-next" aria-label="Next" onclick="moveSlide(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
   <div id="lightbox" class="lightbox">
-    <button class="close" aria-label="Close">&times;</button>
+    <button class="lb-close" aria-label="Close"><i class="fas fa-xmark"></i></button>
     <img src="" alt="Zoomed photo">
   </div>
 
-  <!-- ───────── CONTACT ───────── -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <ul>
-      <li><i class="fab fa-researchgate"></i> <a href="https://www.researchgate.net/profile/Hocine-Mahni?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a></li>
-      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/hocine-mahni-85780518b/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><i class="fas fa-envelope"></i> <a href="mailto:hocine.mahni@ensta.fr">hocine.mahni@ensta.fr</a></li>
-      <li><i class="fab fa-github"></i> <a href="https://github.com/hocinemahni" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="section-inner contact-inner">
+      <div class="section-label reveal">07 &mdash; Contact</div>
+      <h2 class="section-title reveal">Let&rsquo;s connect.</h2>
+      <p class="contact-sub reveal">Open to collaborations, research discussions &amp; opportunities.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:hocine.mahni@ensta.fr" class="contact-link">
+          <i class="fas fa-envelope"></i><span>hocine.mahni@ensta.fr</span>
+        </a>
+        <a href="https://www.linkedin.com/in/hocine-mahni-85780518b/" target="_blank" rel="noopener" class="contact-link">
+          <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+        </a>
+        <a href="https://www.researchgate.net/profile/Hocine-Mahni?ev=hdr_xprf" target="_blank" rel="noopener" class="contact-link">
+          <i class="fab fa-researchgate"></i><span>ResearchGate</span>
+        </a>
+        <a href="https://github.com/hocinemahni" target="_blank" rel="noopener" class="contact-link">
+          <i class="fab fa-github"></i><span>GitHub</span>
+        </a>
+      </div>
+    </div>
   </section>
 
-  <!-- ───────── FOOTER ───────── -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Hocine Mahni.</p>
+    <div class="footer-inner">
+      <span class="nav-logo">HM<span class="dot">.</span></span>
+      <p>&copy; 2026 Hocine Mahni &mdash; Lab-STICC &middot; ENSTA Paris</p>
+    </div>
   </footer>
 
-  <!-- Script principal -->
   <script src="script.js"></script>
 </body>
 </html>
